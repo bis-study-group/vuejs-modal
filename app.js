@@ -41,7 +41,7 @@ new Vue({
   },
   methods: {
     open() {
-      return this.modalOpen = true
+      this.modalOpen = true
     },
   },
 });
