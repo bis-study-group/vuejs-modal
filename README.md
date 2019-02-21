@@ -23,7 +23,7 @@ HTML と CSS は出来ているので変更しません。
 `solution/{your name}` のルールでブランチを作成してください。
 
 ```console
-$ git clone git@github.com:bis-study-group/vuejs-photo-gallery.git
+$ git clone git@github.com:bis-study-group/vuejs-modal.git
 $ git checkout -b solution/name
 ```
 
