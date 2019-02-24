@@ -5,28 +5,30 @@ Vue.component('modal', {
         <div class="modal-container">
           <header class="modal-header">
             <h2 class="modal-title">
-              <!-- Insert code here... -->
+              {{ title }}
             </h2>
             <button class="modal-close" @click="close">&times;</button>
           </header>
           <main class="modal-content">
             <!-- Insert code here... -->
+            <slot></slot>
           </main>
         </div>
       </div>
     </div>
   `,
   props: [
-    /* Insert code here... */
+    'title',
+    'value'
   ],
   computed: {
     cssClass() {
-      /* Insert code here... */
+      if (this.value) return 'is-open'
     },
   },
   methods: {
     close() {
-      /* Insert code here... */
+      this.$emit('input', false)
     },
   },
 });
@@ -38,7 +40,7 @@ new Vue({
   },
   methods: {
     open() {
-      /* Insert code here... */
+      this.modalOpen = true
     },
   },
 });
