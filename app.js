@@ -22,6 +22,9 @@ Vue.component('modal', {
   computed: {
     cssClass() {
       /* Insert code here... */
+      if (this.$root.modalOpen) {
+        return "is-open"
+      }
     },
   },
   methods: {
@@ -39,6 +42,7 @@ new Vue({
   methods: {
     open() {
       /* Insert code here... */
+      this.modalOpen = true
     },
   },
 });
