@@ -17,18 +17,19 @@ Vue.component('modal', {
     </div>
   `,
   props: [
-    'title'
+    'title',
+    'value'
   ],
   computed: {
     cssClass() {
-      if (this.$root.modalOpen) {
+      if (this.value) {
         return 'is-open'
       }
     },
   },
   methods: {
     close() {
-      this.$root.modalOpen = false
+      this.$emit('input', false) 
     },
   },
 });
